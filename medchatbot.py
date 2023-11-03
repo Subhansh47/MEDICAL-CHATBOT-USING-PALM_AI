@@ -5,10 +5,8 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 import os
-from dotenv import load_dotenv
-load_dotenv()
 
-key = os.environ['GOOGLE_API_KEY']
+key = st.secret['GOOGLE_API_KEY']
 llm = GooglePalm(google_api_key=key, temperature=.7)
 
 embeddings = HuggingFaceEmbeddings()
