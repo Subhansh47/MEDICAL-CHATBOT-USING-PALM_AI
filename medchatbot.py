@@ -4,6 +4,7 @@ from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
+import streamlit as st
 import os
 
 key = st.secrets['GOOGLE_API_KEY']
